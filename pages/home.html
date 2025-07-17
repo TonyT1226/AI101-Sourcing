@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Training for Strategic Sourcing</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-trigger">
+            <div class="sidebar-line"></div>
+            <div class="sidebar-line"></div>
+            <div class="sidebar-line"></div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-list">
+                <li><a href="#home" class="sidebar-link" data-section="home">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Home</span>
+                </a></li>
+                <li><a href="#section1" class="sidebar-link" data-section="section1">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Section 1</span>
+                </a></li>
+                <li><a href="#section2" class="sidebar-link" data-section="section2">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Section 2</span>
+                </a></li>
+                <li><a href="#section3" class="sidebar-link" data-section="section3">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Section 3</span>
+                </a></li>
+                <li><a href="#section4" class="sidebar-link" data-section="section4">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Section 4</span>
+                </a></li>
+                <li><a href="#section5" class="sidebar-link" data-section="section5">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Section 5</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Navbar placeholder -->
+    <div id="navbar-placeholder"></div>
+    
+    <main class="main-content">
+        <section id="home" class="section-card text-center mb-16 pt-8">
+            <h1 class="section-title">AI Training for Strategic Sourcing</h1>
+            <p class="section-subtitle max-w-3xl mx-auto mb-8">Welcome to your interactive guide to Artificial Intelligence. This series of short modules is designed to help the Rutgers sourcing team understand and leverage AI as a powerful tool in your daily work. Navigate through the sections below to learn at your own pace.</p>
+            <div class="chart-container">
+                <canvas id="progressChart"></canvas>
+            </div>
+        </section>
+        <div class="space-y-12">
+            <section id="section1" class="scroll-mt-20">
+                <h2 class="section-title">What is AI & Why Should We Care?</h2>
+                <div class="section-card">
+                    <div class="grid text-center">
+                        <div class="bg-red-100 p-4 rounded-lg">
+                            <h3 class="font-bold text-lg mb-2">💡 AI is a Tool, Not Magic</h3>
+                            <p class="text-sm">Think of AI as a sophisticated system trained to recognize patterns, make predictions, and generate new content based on the data it has learned. It's not about thinking robots; it's about practical problem-solving.</p>
+                        </div>
+                        <div class="bg-red-100 p-4 rounded-lg">
+                            <h3 class="font-bold text-lg mb-2">🗺️ You Already Use AI</h3>
+                            <p class="text-sm">From Netflix show recommendations and Google Maps traffic predictions to email spam filters, AI is already integrated into the tools we use daily, making them smarter and more efficient.</p>
+                        </div>
+                        <div class="bg-red-100 p-4 rounded-lg">
+                            <h3 class="font-bold text-lg mb-2">✍️ Generative vs. Traditional AI</h3>
+                            <p class="text-sm">Traditional AI analyzes existing data (e.g., identifies spam). Generative AI, the focus of this training, *creates* new content, like drafting an email or brainstorming ideas.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
+                        <p class="font-semibold text-red-700">Just as Google Maps helps us find the best route, AI can help us find the best suppliers or the most effective negotiation strategy.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="section2" class="scroll-mt-20">
+                <h2 class="section-title">The Art of the Prompt</h2>
+                <div class="section-card">
+                    <p class="mb-6">The single most important skill for using generative AI is writing effective instructions, or "prompts." The quality of the AI's output is directly tied to the clarity and detail of your request. In this module, we introduce a simple framework to help you build powerful prompts that deliver precisely the results you need.</p>
+                    <div class="lg-grid-cols-2 grid items-center gap-8">
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">The "CRAFT" Framework</h3>
+                            <p class="mb-4">Follow these five steps to build a great prompt. Click each step to see how it builds a complete instruction.</p>
+                            <div id="craft-container" class="space-y-2">
+                                <button data-step="c" class="craft-step w-full text-left p-3 bg-red-100 hover:bg-red-200 rounded-lg transition-colors duration-200"><strong>C</strong>ontext: Set the scene for the AI</button>
+                                <button data-step="r" class="craft-step w-full text-left p-3 bg-red-100 hover:bg-red-200 rounded-lg transition-colors duration-200"><strong>R</strong>ole: Assign a specific role to the AI</button>
+                                <button data-step="a" class="craft-step w-full text-left p-3 bg-red-100 hover:bg-red-200 rounded-lg transition-colors duration-200"><strong>A</strong>ction: The specific task to perform</button>
+                                <button data-step="f" class="craft-step w-full text-left p-3 bg-red-100 hover:bg-red-200 rounded-lg transition-colors duration-200"><strong>F</strong>ormat: Define the output structure</button>
+                                <button data-step="t" class="craft-step w-full text-left p-3 bg-red-100 hover:bg-red-200 rounded-lg transition-colors duration-200"><strong>T</strong>one: Specify the writing style</button>
+                            </div>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border h-full">
+                            <h4 class="font-semibold mb-2">Your Prompt:</h4>
+                            <div id="prompt-output" class="bg-white p-3 rounded h-48 text-gray-700 text-sm whitespace-pre-wrap">Click a step to begin...</div>
+                        </div>
+                        <button id="reset-prompt" class="mt-2 text-xs hover:underline">Reset</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section3" class="scroll-mt-20">
+                <h2 class="section-title">AI for Everyday Productivity</h2>
+                <div class="section-card">
+                    <p class="mb-6">AI isn't just for big, complex projects. You can use it right now to save time on common administrative and communication tasks. This section provides interactive examples of how AI can act as a "Swiss Army Knife" for summarizing long documents, drafting communications, and reformatting information on the fly.</p>
+                    <div id="productivity-tabs">
+                        <div class="flex border-b border-red-200 mb-4">
+                            <button data-tab="summarize" class="tab-button">Summarize</button>
+                            <button data-tab="draft" class="tab-button">Draft</button>
+                            <button data-tab="reformat" class="tab-button">Reformat</button>
+                        </div>
+                        <div id="tab-content"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="section4" class="scroll-mt-20">
+                <h2 class="section-title">Level Up Your Sourcing</h2>
+                <div class="section-card">
+                    <p class="mb-6">Now we'll focus on core sourcing activities. AI can act as a powerful research assistant, helping you analyze markets and discover new suppliers much faster than traditional methods. Explore the examples below to see how you can apply AI to gather intelligence and accelerate the early stages of the sourcing process.</p>
+                    <div class="space-y-4">
+                        <details class="bg-red-50 p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-lg">Market Intelligence</summary>
+                            <div class="mt-4 pt-4 border-t border-red-200">
+                                <p class="font-medium">Prompt:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"What are the top 5 trends affecting the cost of scientific lab equipment in 2024?"</p>
+                                <p class="font-medium">Potential AI Output:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"1. Supply Chain Disruptions: Lingering effects from global events are causing delays... 2. Raw Material Costs: Increased demand for specialized metals... 3. Inflationary Pressures... 4. Technological Advancements... 5. Sustainable Manufacturing..."</p>
+                            </div>
+                        </details>
+                        <details class="bg-red-50 p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-lg">Supplier Identification</summary>
+                            <div class="mt-4 pt-4 border-t border-red-200">
+                                <p class="font-medium">Prompt:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"List 10 potential suppliers of sustainable office furniture in the Northeast US. Include their websites if possible."</p>
+                                <p class="font-medium">Potential AI Output:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"Here are 10 potential suppliers... 1. Eco-Furniture Inc. (www...)... 2. GreenChair Co. (www...)..."</p>
+                            </div>
+                        </details>
+                        <details class="bg-red-50 p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-lg">Vet a Supplier</summary>
+                            <div class="mt-4 pt-4 border-t border-red-200">
+                                <p class="font-medium">Prompt:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"Summarize any recent news or financial reports for Steelcase Inc. Focus on stability and supply chain risks."</p>
+                                <p class="font-medium">Potential AI Output:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"Recent reports for Steelcase (SCS) indicate stable revenue but highlight concerns around rising material costs and logistics challenges..."</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <section id="section5" class="scroll-mt-20">
+                <h2 class="section-title">Deeper Dive</h2>
+                <div class="section-card">
+                    <p class="mb-6">In this section, we explore more advanced applications. AI can serve as a valuable brainstorming partner when developing complex documents like RFPs and can help you prepare for negotiations by anticipating arguments and identifying points of leverage. This moves beyond simple information retrieval to strategic assistance.</p>
+                    <div class="space-y-4">
+                        <details class="bg-red-50 p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-lg">RFP Development</summary>
+                            <div class="mt-4 pt-4 border-t border-red-200">
+                                <p class="font-medium">Prompt:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"Generate a list of 15 detailed questions for an RFP for custodial services for a university campus. Include questions about staff training, green cleaning practices, and performance metrics."</p>
+                                <p class="font-medium">Potential AI Output:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"1. Describe your standard employee background check and training process... 2. What is your policy on using Green Seal certified cleaning products?... 12. How do you measure and report on key performance indicators (KPIs) like cleaning quality...?"</p>
+                            </div>
+                        </details>
+                        <details class="bg-red-50 p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-lg">Negotiation Strategy</summary>
+                            <div class="mt-4 pt-4 border-t border-red-200">
+                                <p class="font-medium">Prompt:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"I am negotiating a contract with a software vendor. My goal is to lower the annual subscription cost by 15%. What are 5 potential leverage points I could use? What objections might the vendor raise, and how can I respond?"</p>
+                                <p class="font-medium">Potential AI Output:</p>
+                                <p class="text-sm p-3 bg-white rounded my-2">"Leverage Points: 1. Multi-Year Contract... 2. Case Study... Potential Objections: 'Our pricing is standard.' Response: 'We understand, but given the scale of our implementation...'"</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="section6" class="scroll-mt-20">
+            <div class="bg-red-200 border-l-4 border-red-500 text-red-900 p-6 rounded-r-lg">
+                <p class="mb-6 font-semibold">Using AI responsibly is critical to protect university and supplier data. Understanding these limitations and adhering to policy is essential for everyone.</p>
+                <div class="space-y-4">
+                    <div>
+                        <div class="ai-guideline-header mb-1">
+                            <span class="emoji">🔒</span>
+                            <h3 class="font-bold">Confidentiality is Key</h3>
+                        </div>
+                        <p class="text-sm"><strong>NEVER</strong> input sensitive, confidential, or personally identifiable information (PII) from the university, suppliers, or employees into a public AI tool. Treat every prompt as if it were public.</p>
+                    </div>
+                    <div>
+                        <div class="ai-guideline-header mb-1">
+                            <span class="emoji">⚠️</span>
+                            <h3 class="font-bold">AI Makes Mistakes</h3>
+                        </div>
+                        <p class="text-sm">AI models can be wrong or "hallucinate" (make things up). <strong>ALWAYS</strong> fact-check critical information like supplier data, pricing, or contract clauses. The human is the final validator.</p>
+                    </div>
+                    <div>
+                        <div class="ai-guideline-header mb-1">
+                            <span class="emoji">✅</span>
+                            <h3 class="font-bold">It's a First Draft, Not a Final Product</h3>
+                        </div>
+                        <p class="text-sm">Use AI to create a starting point, not the finished work. Your expertise is required to refine, edit, and approve the output. AI is a co-pilot, not the pilot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <script src="../js/components.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.navbar-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Only prevent default for anchor links (same page)
+                if (link.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // For external links (like resources.html), let the browser handle navigation
+            });
+        });
+
+        // Sidebar navigation functionality
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Update active state
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        // Update active state based on scroll position
+        function updateActiveSection() {
+            const sections = ['home', 'section1', 'section2', 'section3', 'section4', 'section5'];
+            const scrollPosition = window.scrollY + 100; // Offset for better detection
+            
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i]);
+                if (section && section.offsetTop <= scrollPosition) {
+                    // Update sidebar active state
+                    sidebarLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-section') === sections[i]) {
+                            link.classList.add('active');
+                        }
+                    });
+                    break;
+                }
+            }
+        }
+
+        // Listen for scroll events to update active section
+        window.addEventListener('scroll', updateActiveSection);
+        
+        // Initial active state
+        updateActiveSection();
+
+        const progressChartCtx = document.getElementById('progressChart').getContext('2d');
+        const progressChart = new Chart(progressChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['1: AI Basics', '2: Prompting', '3: Productivity', '4: Sourcing I', '5: Sourcing II'],
+                datasets: [{
+                    label: 'Learning Progression',
+                    data: [1, 2, 3, 4, 5],
+                    backgroundColor: [
+                        '#fee2e2',
+                        '#fca5a5',
+                        '#ef4444',
+                        '#dc2626',
+                        '#b91c1c'
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+                scales: {
+                    x: { display: false, max: 5.5 },
+                    y: {
+                        grid: { display: false },
+                        ticks: {
+                            color: '#7c2222',
+                            font: { weight: 'bold' }
+                        }
+                    }
+                }
+            }
+        });
+        document.getElementById('progressChart').onclick = (evt) => {
+            const res = progressChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+            if (res.length > 0) {
+                const sectionIndex = res[0].index;
+                const sectionId = `#section${sectionIndex + 1}`;
+                document.querySelector(sectionId).scrollIntoView({behavior: 'smooth', block: 'start' });
+            }
+        };
+        const craftSteps = document.querySelectorAll('.craft-step');
+        const promptOutput = document.getElementById('prompt-output');
+        const promptTexts = {
+            c: "I am a sourcing manager at a large public university. We are currently evaluating suppliers for a new campus-wide landscaping contract.",
+            r: "\n\nAct as an expert in contract law with a specialty in vendor agreements.",
+            a: "\n\nBrainstorm a list of potential risks associated with this partnership.",
+            f: "\n\nOrganize the risks into three categories: financial, geopolitical, and operational. Present this as a bulleted list under each category heading.",
+            t: "\n\nUse a clear, concise, and objective tone."
+        };
+        let builtPrompt = '';
+        let activatedSteps = new Set();
+        
+        function resetPromptBuilder() {
+            builtPrompt = '';
+            activatedSteps.clear();
+            promptOutput.textContent = 'Click a step to begin...';
+            craftSteps.forEach(s => s.classList.remove('opacity-50'));
+        }
+
+        document.getElementById('reset-prompt').addEventListener('click', resetPromptBuilder);
+
+        craftSteps.forEach(step => {
+            step.addEventListener('click', () => {
+                const stepKey = step.dataset.step;
+                if (!activatedSteps.has(stepKey)) {
+                    if (activatedSteps.size === 0) {
+                        promptOutput.textContent = '';
+                    }
+                    builtPrompt += promptTexts[stepKey];
+                    promptOutput.textContent = builtPrompt;
+                    step.classList.add('opacity-50');
+                    activatedSteps.add(stepKey);
+                }
+            });
+        });
+
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContent = document.getElementById('tab-content');
+        const tabData = {
+            summarize: {
+                title: 'Summarize Text',
+                description: 'Paste a long article or email chain and have the AI pull out the key points.',
+                inputText: `Subject: Q3 Project Updates & Cross-Departmental Synergy\n\nTo all stakeholders, please be advised that the Q3 project timeline has been adjusted to accommodate new downstream dependencies. The marketing team requires the final asset package by July 25th, which precedes the original engineering completion date. As such, we will need to accelerate the UAT phase. Please review the attached 20-page document for the full revised plan and provide feedback. We must also consider the synergistic opportunities with the ongoing 'Project Phoenix' initiative. Let's touch base asynchronously to operationalize these action items.`,
+                outputText: `Key Points:\n- Project timeline has changed.\n- Marketing needs assets by July 25th.\n- The testing (UAT) phase will be sped up.\n\nAction Item:\n- Review the new plan and provide feedback.`
+            },
+            draft: {
+                title: 'Draft an Agenda',
+                description: 'Quickly generate a starting point for meeting agendas, emails, or reports.',
+                inputText: `Draft an agenda for a 1-hour kickoff meeting with the IT department for a new software sourcing project.`,
+                outputText: `Meeting Agenda: New Software Sourcing Kickoff\n\n1. Introductions (5 mins)\n2. Project Goals & Scope (15 mins)\n3. Key Technical Requirements (20 mins)\n4. Proposed Timeline & Milestones (10 mins)\n5. Roles & Responsibilities (5 mins)\n6. Next Steps (5 mins)`
+            },
+            reformat: {
+                title: 'Reformat Information',
+                description: 'Turn a block of text into a table, list, or another format for easier comparison.',
+                inputText: `We are considering two vendors. Vendor A is cheaper but has a longer implementation time. Their support is based overseas. Vendor B costs more upfront but offers 24/7 US-based support and a faster go-live date. Draw a table to compare the two vendors.`,
+                outputText: `<img src=\"../photo/sec3-reformat-table.png\" alt=\"Vendor Comparison Table\" style=\"max-width:100%;border-radius:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.04);margin-top:0.5rem;\">`
+            }
+        };
+
+        function renderTabContent(tabKey) {
+            const data = tabData[tabKey];
+            tabContent.innerHTML = `
+                <div class="tab-content-wrapper">
+                  <div class="bg-red-50 p-6 rounded-lg border">
+                      <h4 class="font-bold text-lg mb-2">${data.title}</h4>
+                      <p class="text-sm mb-4">${data.description}</p>
+                      <div class="tab-content-grid">
+                          <div>
+                              <label class="font-semibold text-sm">Sample Input:</label>
+                              <div class="mt-1 p-2 bg-white rounded-md h-48 overflow-y-auto text-sm whitespace-pre-wrap">${data.inputText}</div>
+                          </div>
+                          <div>
+                              <label class="font-semibold text-sm">Simulated AI Output:</label>
+                               <div class="mt-1 p-2 bg-gray-100 rounded-md h-48 overflow-y-auto text-sm whitespace-pre-wrap">${data.outputText}</div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            `;
+        }
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                // Render the content for the selected tab
+                renderTabContent(button.dataset.tab);
+            });
+        });
+        
+        // Set the first tab as active by default
+        tabButtons[0].classList.add('active');
+        renderTabContent('summarize');
+        resetPromptBuilder();
+    });
+    </script>
+</body>
+</html>
