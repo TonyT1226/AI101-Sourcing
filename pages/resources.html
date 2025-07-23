@@ -38,6 +38,10 @@
                     <div class="sidebar-line-item"></div>
                     <span class="sidebar-text">Useful Links</span>
                 </a></li>
+                <li><a href="#feedback" class="sidebar-link" data-section="feedback">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Feedback</span>
+                </a></li>
             </ul>
         </nav>
     </div>
@@ -102,15 +106,28 @@
                     <div class="space-y-4">
                         <div class="bg-red-50 p-4 rounded-lg border">
                             <h3 class="font-semibold mb-2">Supplier Research</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"Research [supplier name] and provide: 1) Company overview and size, 2) Key products/services, 3) Recent news or financial performance, 4) Potential risks or concerns, 5) Competitive advantages."</p>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Research <strong>[supplier name]</strong> and provide: 1) Company overview and size, 2) Key products/services, 3) Recent news or financial performance, 4) Potential risks or concerns, 5) Competitive advantages."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="supplier-research">📋 Copy Template</button>
                         </div>
                         <div class="bg-red-50 p-4 rounded-lg border">
                             <h3 class="font-semibold mb-2">Market Analysis</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"Analyze the [industry/market] for [product/service] and identify: 1) Current market trends, 2) Key players and their market share, 3) Pricing trends, 4) Supply chain challenges, 5) Future outlook."</p>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Analyze the <strong>[industry/market]</strong> for <strong>[product/service]</strong> and identify: 1) Current market trends, 2) Key players and their market share, 3) Pricing trends, 4) Supply chain challenges, 5) Future outlook."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="market-analysis">📋 Copy Template</button>
                         </div>
                         <div class="bg-red-50 p-4 rounded-lg border">
                             <h3 class="font-semibold mb-2">RFP Question Generator</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"Generate 15-20 detailed questions for an RFP for [service/product]. Include questions about: 1) Technical capabilities, 2) Experience and references, 3) Pricing structure, 4) Implementation timeline, 5) Support and maintenance."</p>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Generate 15-20 detailed questions for an RFP for <strong>[service/product]</strong>. Include questions about: 1) Technical capabilities, 2) Experience and references, 3) Pricing structure, 4) Implementation timeline, 5) Support and maintenance."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="rfp-generator">📋 Copy Template</button>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border">
+                            <h3 class="font-semibold mb-2">Negotiation Strategy</h3>
+                            <p class="text-sm p-3 bg-white rounded my-2">"I am negotiating <strong>[contract type]</strong> with <strong>[vendor name]</strong>. My goal is to <strong>[specific objective]</strong>. What are 5 potential leverage points I could use? What objections might the vendor raise, and how can I respond?"</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="negotiation-strategy">📋 Copy Template</button>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border">
+                            <h3 class="font-semibold mb-2">Risk Assessment</h3>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Assess the risks of partnering with <strong>[supplier name]</strong> for <strong>[product/service]</strong>. Consider: 1) Financial stability, 2) Operational capacity, 3) Geographic risks, 4) Technology dependencies, 5) Compliance requirements."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="risk-assessment">📋 Copy Template</button>
                         </div>
                     </div>
                 </div>
@@ -150,6 +167,72 @@
                         <p class="text-sm mb-3">Explore optimized prompts for a breadth of business and personal tasks, curated by Anthropic for use with Claude and other AI models.</p>
                         <a href="https://docs.anthropic.com/en/resources/prompt-library/library" target="_blank" class="text-red-600 hover:text-red-800 underline text-sm">Visit Anthropic Prompt Library →</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback" class="scroll-mt-20">
+            <h2 class="section-title">Feedback & Contact</h2>
+            <div class="section-card">
+                <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-6 rounded-r-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <span class="text-red-600 text-xl">🚧</span>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-base font-bold text-red-800">
+                                <strong>Development Notice:</strong> COMING SOON! This form will be fully functional in the next update.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mb-6">Help us improve this training platform! Share your feedback, suggestions, or report any issues you encounter.</p>
+                
+                <form id="feedback-form" class="space-y-4">
+                    <div>
+                        <label for="feedback-type" class="block font-semibold mb-2">Type of Feedback:</label>
+                        <select id="feedback-type" name="feedback-type" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                            <option value="general">General Feedback</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="suggestion">Feature Suggestion</option>
+                            <option value="content">Content Improvement</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="feedback-name" class="block font-semibold mb-2">Name (Optional):</label>
+                        <input type="text" id="feedback-name" name="feedback-name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Your name">
+                    </div>
+                    
+                    <div>
+                        <label for="feedback-email" class="block font-semibold mb-2">Email (Optional):</label>
+                        <input type="email" id="feedback-email" name="feedback-email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="your.email@rutgers.edu">
+                    </div>
+                    
+                    <div>
+                        <label for="feedback-message" class="block font-semibold mb-2">Message: *</label>
+                        <textarea id="feedback-message" name="feedback-message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Please share your feedback, suggestions, or report any issues..." required></textarea>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <button type="submit" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+                            📤 Submit Feedback
+                        </button>
+                        <button type="button" id="reset-form" class="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold">
+                            🔄 Reset Form
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="feedback-success" class="hidden mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                    <p class="font-semibold">✅ Thank you for your feedback!</p>
+                    <p class="text-sm">Your message has been submitted successfully. We'll review it and get back to you if needed.</p>
+                </div>
+                
+                <div id="feedback-error" class="hidden mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                    <p class="font-semibold">❌ Error submitting feedback</p>
+                    <p class="text-sm">Please try again or contact us directly.</p>
                 </div>
             </div>
         </section>
@@ -196,7 +279,7 @@
 
         // Update active state based on scroll position
         function updateActiveSection() {
-            const sections = ['resources', 'ai-tools', 'prompt-templates', 'best-practices', 'useful-links'];
+            const sections = ['resources', 'ai-tools', 'prompt-templates', 'best-practices', 'useful-links', 'feedback'];
             const scrollPosition = window.scrollY + 100; // Offset for better detection
             
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -219,6 +302,158 @@
         
         // Initial active state
         updateActiveSection();
+
+        // Copy template functionality
+        const copyButtons = document.querySelectorAll('.copy-template-btn');
+        copyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const templateType = button.getAttribute('data-template');
+                const templates = {
+                    'supplier-research': {
+                        title: 'Supplier Research Template',
+                        content: `Research [supplier name] and provide:
+1) Company overview and size
+2) Key products/services
+3) Recent news or financial performance
+4) Potential risks or concerns
+5) Competitive advantages
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'market-analysis': {
+                        title: 'Market Analysis Template',
+                        content: `Analyze the [industry/market] for [product/service] and identify:
+1) Current market trends
+2) Key players and their market share
+3) Pricing trends
+4) Supply chain challenges
+5) Future outlook
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'rfp-generator': {
+                        title: 'RFP Question Generator Template',
+                        content: `Generate 15-20 detailed questions for an RFP for [service/product]. Include questions about:
+1) Technical capabilities
+2) Experience and references
+3) Pricing structure
+4) Implementation timeline
+5) Support and maintenance
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'negotiation-strategy': {
+                        title: 'Negotiation Strategy Template',
+                        content: `I am negotiating [contract type] with [vendor name]. My goal is to [specific objective].
+
+What are 5 potential leverage points I could use? What objections might the vendor raise, and how can I respond?
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'risk-assessment': {
+                        title: 'Risk Assessment Template',
+                        content: `Assess the risks of partnering with [supplier name] for [product/service]. Consider:
+1) Financial stability
+2) Operational capacity
+3) Geographic risks
+4) Technology dependencies
+5) Compliance requirements
+
+Additional context: [Add any specific requirements or focus areas]`
+                    }
+                };
+
+                const template = templates[templateType];
+                if (template) {
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(template.content).then(() => {
+                        // Show success message
+                        button.textContent = '✅ Copied!';
+                        button.style.backgroundColor = '#059669';
+                        setTimeout(() => {
+                            button.textContent = '📋 Copy Template';
+                            button.style.backgroundColor = '';
+                        }, 2000);
+                    }).catch(() => {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = template.content;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        
+                        // Show success message
+                        button.textContent = '✅ Copied!';
+                        button.style.backgroundColor = '#059669';
+                        setTimeout(() => {
+                            button.textContent = '📋 Copy Template';
+                            button.style.backgroundColor = '';
+                        }, 2000);
+                    });
+                }
+            });
+        });
+
+        // Feedback form functionality (development version)
+        const feedbackForm = document.getElementById('feedback-form');
+        const feedbackSuccess = document.getElementById('feedback-success');
+        const feedbackError = document.getElementById('feedback-error');
+        const resetFormBtn = document.getElementById('reset-form');
+
+        // Ensure message boxes are hidden on page load
+        feedbackSuccess.classList.add('hidden');
+        feedbackError.classList.add('hidden');
+
+        feedbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Hide any existing messages first
+            feedbackSuccess.classList.add('hidden');
+            feedbackError.classList.add('hidden');
+            
+            // Show development notice instead of sending
+            const submitBtn = feedbackForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '🚧 Processing...';
+            submitBtn.disabled = true;
+
+            // Simulate form processing
+            setTimeout(() => {
+                // Create development notice popup
+                const developmentMessage = document.createElement('div');
+                developmentMessage.className = 'feedback-popup mt-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-800 rounded-lg';
+                developmentMessage.innerHTML = `
+                    <p class="font-semibold">🚧 Development Notice</p>
+                    <p class="text-sm">Form submission will be enabled in the next update. Thank you for your interest!</p>
+                `;
+                
+                // Insert the message after the form
+                feedbackForm.parentNode.insertBefore(developmentMessage, feedbackForm.nextSibling);
+                
+                // Reset form
+                feedbackForm.reset();
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Hide message after 5 seconds and remove element
+                setTimeout(() => {
+                    developmentMessage.remove();
+                }, 5000);
+            }, 1000);
+        });
+
+        resetFormBtn.addEventListener('click', () => {
+            feedbackForm.reset();
+            feedbackSuccess.classList.add('hidden');
+            feedbackError.classList.add('hidden');
+            
+            // Remove any development notice messages
+            const existingMessages = feedbackForm.parentNode.querySelectorAll('.bg-yellow-100');
+            existingMessages.forEach(msg => msg.remove());
+        });
     });
     </script>
 </body>

@@ -25,24 +25,25 @@
                 </a></li>
                 <li><a href="#section1" class="sidebar-link" data-section="section1">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Section 1</span>
+                    <span class="sidebar-text">AI Basics</span>
                 </a></li>
                 <li><a href="#section2" class="sidebar-link" data-section="section2">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Section 2</span>
+                    <span class="sidebar-text">The Art of Prompting</span>
                 </a></li>
                 <li><a href="#section3" class="sidebar-link" data-section="section3">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Section 3</span>
+                    <span class="sidebar-text">Practice Exercise</span>
                 </a></li>
                 <li><a href="#section4" class="sidebar-link" data-section="section4">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Section 4</span>
+                    <span class="sidebar-text">Everyday Productivity</span>
                 </a></li>
                 <li><a href="#section5" class="sidebar-link" data-section="section5">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Section 5</span>
+                    <span class="sidebar-text">Level Up Sourcing</span>
                 </a></li>
+
             </ul>
         </nav>
     </div>
@@ -106,6 +107,52 @@
                 </div>
             </section>
             <section id="section3" class="scroll-mt-20">
+                <h2 class="section-title">Practice Exercise: Build Your Own Prompt</h2>
+                <div class="section-card">
+                    <p class="mb-6">Now try building a prompt for a real sourcing scenario. Fill in the blanks below to create a complete CRAFT prompt that you can use immediately in your work.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block font-semibold mb-2">Context (What's the situation?):</label>
+                            <textarea id="practice-context" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., I'm evaluating suppliers for campus dining services"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Role (Who should the AI act as?):</label>
+                            <textarea id="practice-role" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Act as a food service procurement expert"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Action (What should the AI do?):</label>
+                            <textarea id="practice-action" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Analyze the top 5 suppliers and provide recommendations"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Format (How should the output be structured?):</label>
+                            <textarea id="practice-format" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Present as a comparison table with pros and cons"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Tone (What style should be used?):</label>
+                            <textarea id="practice-tone" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Professional and objective"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex space-x-4">
+                        <button id="generate-practice-prompt" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+                            🚀 Generate My Prompt
+                        </button>
+                        <button id="clear-practice" class="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold">
+                            🗑️ Clear Form
+                        </button>
+                    </div>
+                    
+                    <div id="practice-output" class="mt-6 hidden">
+                        <h4 class="font-semibold mb-2">Your Complete CRAFT Prompt:</h4>
+                        <div id="practice-prompt-text" class="bg-white p-4 rounded-lg border text-sm whitespace-pre-wrap"></div>
+                        <button id="copy-prompt" class="mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm">
+                            📋 Copy to Clipboard
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section id="section4" class="scroll-mt-20">
                 <h2 class="section-title">AI for Everyday Productivity</h2>
                 <div class="section-card">
                     <p class="mb-6">AI isn't just for big, complex projects. You can use it right now to save time on common administrative and communication tasks. This section provides interactive examples of how AI can act as a "Swiss Army Knife" for summarizing long documents, drafting communications, and reformatting information on the fly.</p>
@@ -119,7 +166,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section4" class="scroll-mt-20">
+            <section id="section5" class="scroll-mt-20">
                 <h2 class="section-title">Level Up Your Sourcing</h2>
                 <div class="section-card">
                     <p class="mb-6">Now we'll focus on core sourcing activities. AI can act as a powerful research assistant, helping you analyze markets and discover new suppliers much faster than traditional methods. Explore the examples below to see how you can apply AI to gather intelligence and accelerate the early stages of the sourcing process.</p>
@@ -151,14 +198,7 @@
                                 <p class="text-sm p-3 bg-white rounded my-2">"Recent reports for Steelcase (SCS) indicate stable revenue but highlight concerns around rising material costs and logistics challenges..."</p>
                             </div>
                         </details>
-                    </div>
-                </div>
-            </section>
-            <section id="section5" class="scroll-mt-20">
-                <h2 class="section-title">Deeper Dive</h2>
-                <div class="section-card">
-                    <p class="mb-6">In this section, we explore more advanced applications. AI can serve as a valuable brainstorming partner when developing complex documents like RFPs and can help you prepare for negotiations by anticipating arguments and identifying points of leverage. This moves beyond simple information retrieval to strategic assistance.</p>
-                    <div class="space-y-4">
+                        
                         <details class="bg-red-50 p-4 rounded-lg cursor-pointer">
                             <summary class="font-semibold text-lg">RFP Development</summary>
                             <div class="mt-4 pt-4 border-t border-red-200">
@@ -180,6 +220,7 @@
                     </div>
                 </div>
             </section>
+
         </div>
         <section id="section6" class="scroll-mt-20">
             <div class="bg-red-200 border-l-4 border-red-500 text-red-900 p-6 rounded-r-lg">
@@ -280,7 +321,7 @@
         const progressChart = new Chart(progressChartCtx, {
             type: 'bar',
             data: {
-                labels: ['1: AI Basics', '2: Prompting', '3: Productivity', '4: Sourcing I', '5: Sourcing II'],
+                labels: ['1: AI Basics', '2: Prompting', '3: Practice', '4: Productivity', '5: Sourcing'],
                 datasets: [{
                     label: 'Learning Progression',
                     data: [1, 2, 3, 4, 5],
@@ -420,6 +461,66 @@
         tabButtons[0].classList.add('active');
         renderTabContent('summarize');
         resetPromptBuilder();
+
+        // Practice exercise functionality
+        const generatePracticeBtn = document.getElementById('generate-practice-prompt');
+        const clearPracticeBtn = document.getElementById('clear-practice');
+        const practiceOutput = document.getElementById('practice-output');
+        const practicePromptText = document.getElementById('practice-prompt-text');
+        const copyPromptBtn = document.getElementById('copy-prompt');
+
+        generatePracticeBtn.addEventListener('click', () => {
+            const context = document.getElementById('practice-context').value.trim();
+            const role = document.getElementById('practice-role').value.trim();
+            const action = document.getElementById('practice-action').value.trim();
+            const format = document.getElementById('practice-format').value.trim();
+            const tone = document.getElementById('practice-tone').value.trim();
+
+            if (!context || !role || !action || !format || !tone) {
+                alert('Please fill in all fields to generate your prompt!');
+                return;
+            }
+
+            const completePrompt = `${context}\n\n${role}\n\n${action}\n\n${format}\n\n${tone}`;
+            practicePromptText.textContent = completePrompt;
+            practiceOutput.classList.remove('hidden');
+        });
+
+        clearPracticeBtn.addEventListener('click', () => {
+            document.getElementById('practice-context').value = '';
+            document.getElementById('practice-role').value = '';
+            document.getElementById('practice-action').value = '';
+            document.getElementById('practice-format').value = '';
+            document.getElementById('practice-tone').value = '';
+            practiceOutput.classList.add('hidden');
+        });
+
+        copyPromptBtn.addEventListener('click', () => {
+            const promptText = practicePromptText.textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                copyPromptBtn.textContent = '✅ Copied!';
+                copyPromptBtn.style.backgroundColor = '#059669';
+                setTimeout(() => {
+                    copyPromptBtn.textContent = '📋 Copy to Clipboard';
+                    copyPromptBtn.style.backgroundColor = '';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = promptText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyPromptBtn.textContent = '✅ Copied!';
+                copyPromptBtn.style.backgroundColor = '#059669';
+                setTimeout(() => {
+                    copyPromptBtn.textContent = '📋 Copy to Clipboard';
+                    copyPromptBtn.style.backgroundColor = '';
+                }, 2000);
+            });
+        });
     });
     </script>
 </body>

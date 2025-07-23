@@ -18,7 +18,7 @@ class ComponentLoader {
 </nav>`,
         footer: `<footer class="footer">
     <p>by Qiyuan (Tony) Tang</p>
-    <p class="text-xs">June 16, 2025</p>
+    <p class="text-xs">Version 1.2 -- July 22, 2025</p>
 </footer>`
     };
 

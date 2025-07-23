@@ -108,7 +108,7 @@ The training includes comprehensive guidelines for:
 
 ## 🤝 Contributing
 
-This project is designed for Rutgers University's strategic sourcing team. For questions or suggestions, please contact the development team.
+This project is designed for Rutgers University's strategic sourcing team. For questions or suggestions, please contact Qiyuan Tang(qt40@finance.rutgers.edu).
 
 ## 📄 License
 

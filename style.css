@@ -18,6 +18,11 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .header {
@@ -82,6 +87,7 @@ body {
 
 .main-content {
   max-width: 900px;
+  width: 90%;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -93,6 +99,8 @@ body {
   padding: 2rem;
   margin-bottom: 2.5rem;
   border: 1px solid #eee;
+  width: 100%;
+  max-width: 100%;
 }
 
 .section-title {
@@ -307,10 +315,18 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
   }
   .lg-grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Ensure grid items don't overflow */
+.grid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* Button styles */
@@ -417,11 +433,12 @@ body {
 }
 
 #prompt-output {
-  min-height: 16rem !important;
+  min-height: 30rem !important;
   padding: 2rem 2.5rem !important;
   margin-top: 1.5rem !important;
-  font-size: 1.08rem;
+  font-size: 1rem;
   border-radius: 1.25rem !important;
+  overflow-y: auto !important;
 }
 
 #craft-container {
@@ -443,4 +460,138 @@ body {
   background: var(--rutgers-red-200) !important;
   color: var(--rutgers-red-900) !important;
   border-color: var(--rutgers-red-500) !important;
-} 
+}
+
+/* Form styles */
+input, select, textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--rutgers-red-500);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+/* Copy button styles */
+.copy-template-btn {
+  transition: all 0.2s ease;
+}
+
+.copy-template-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Fix text selection highlighting issue and ensure consistent text box widths */
+/* Use block layout and full width for consistent text box sizing */
+
+.bg-red-200.border-l-4.p-6 {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Apply consistent width to all text boxes, but exclude buttons */
+.bg-red-50.p-4:not(button),
+.bg-red-50.p-6:not(button),
+.bg-red-100.p-4:not(button),
+.bg-red-100.p-6:not(button) {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure grid items maintain consistent widths, but exclude buttons */
+.grid .bg-red-50:not(button),
+.grid .bg-red-100:not(button),
+.grid .bg-red-200:not(button) {
+  display: block !important;
+  width: 100% !important;
+  min-height: 250px; /* Set minimum height for consistency */
+  box-sizing: border-box;
+}
+
+/* Form elements should be contained */
+.section-card input,
+.section-card textarea,
+.section-card select {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Additional rules for consistent text box alignment, but exclude buttons */
+.bg-red-50.border:not(button),
+.bg-red-100.border:not(button),
+.bg-red-200.border:not(button) {
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure consistent spacing and alignment in grid layouts, but exclude buttons */
+.grid > .bg-red-50:not(button),
+.grid > .bg-red-100:not(button),
+.grid > .bg-red-200:not(button) {
+  height: auto;
+  min-height: 280px; /* Ensure consistent minimum height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make content within text boxes fill available space properly, but exclude buttons */
+.bg-red-50.border:not(button) .space-y-4,
+.bg-red-100.border:not(button) .space-y-4,
+.bg-red-200.border:not(button) .space-y-4 {
+  flex: 1;
+}
+
+/* Resizable textareas for Practice Exercise */
+.practice-textarea {
+  min-height: 60px;
+  max-height: 300px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+  transition: border-color 0.2s;
+}
+
+.practice-textarea:focus {
+  outline: none;
+  border-color: var(--rutgers-red-500);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Feedback form message boxes */
+#feedback-success.hidden,
+#feedback-error.hidden {
+  display: none !important;
+}
+
+/* Popup animation for feedback messages */
+.feedback-popup {
+  animation: slideInUp 0.3s ease-out;
+  transform-origin: bottom center;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.practice-textarea::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
