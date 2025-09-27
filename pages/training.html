@@ -22,25 +22,25 @@
                     <div class="sidebar-line-item"></div>
                     <span class="sidebar-text">Training Overview</span>
                 </a></li>
-                <li><a href="#foundation" class="sidebar-link" data-section="foundation">
+                <li><a href="training-basics.html" class="sidebar-link">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Part 1: Foundation</span>
+                    <span class="sidebar-text">📚 Training Basics</span>
                 </a></li>
-                <li><a href="#anatomy" class="sidebar-link" data-section="anatomy">
+                <li><a href="#practice" class="sidebar-link" data-section="practice">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Part 2: C-R-A-F-T Framework</span>
+                    <span class="sidebar-text">Build Your Own Prompt</span>
                 </a></li>
-                <li><a href="#workshop" class="sidebar-link" data-section="workshop">
+                <li><a href="#templates" class="sidebar-link" data-section="templates">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Part 3: Interactive Workshop</span>
+                    <span class="sidebar-text">Prompt Templates</span>
                 </a></li>
-                <li><a href="#techniques" class="sidebar-link" data-section="techniques">
+                <li><a href="training-applications.html" class="sidebar-link">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Part 4: Techniques & Best Practices</span>
+                    <span class="sidebar-text">📊 Real-World Applications</span>
                 </a></li>
-                <li><a href="#conclusion" class="sidebar-link" data-section="conclusion">
+                <li><a href="#guidelines" class="sidebar-link" data-section="guidelines">
                     <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Part 5: Conclusion</span>
+                    <span class="sidebar-text">AI Guidelines</span>
                 </a></li>
             </ul>
         </nav>
@@ -52,162 +52,120 @@
     <main class="main-content">
         <section id="training" class="section-card text-center mb-16 pt-8">
             <h1 class="section-title">Prompt Engineering for Strategic Sourcing</h1>
-            <p class="section-subtitle max-w-3xl mx-auto mb-8">A comprehensive training session to equip the sourcing team with fundamental skills and techniques of prompt engineering, enabling them to use AI tools to generate specific, accurate, and high-quality outputs for their daily tasks.</p>
-            
+            <p class="section-subtitle max-w-3xl mx-auto mb-8">Master the fundamentals of prompt engineering and apply AI to your sourcing workflow. Use the Training dropdown in the navigation above to explore different modules.</p>
         </section>
         
         <div class="space-y-12">
-            <section id="foundation" class="scroll-mt-20">
-                <h2 class="section-title">Part 1: The Foundation</h2>
+            <!-- Part 3: Build Your Own Prompt -->
+            <section id="practice" class="scroll-mt-20">
+                <h2 class="section-title">Build Your Own Prompt</h2>
                 <div class="section-card">
-                    <div class="space-y-6">
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Why This is the Most Important Skill</h3>
-                            <ul class="space-y-4 text-sm">
-                                <li><strong>Core Principle:</strong> AI is a tool, and the prompt is how you control it.</li>
-                                <li><strong>Analogy:</strong> Learning to prompt is like learning to use the advanced functions on a calculator instead of just addition and subtraction. It unlocks the tool's true power.</li>
-                                <li><strong>Golden Rule:</strong> "Garbage In, Garbage Out." A vague prompt leads to a generic, often useless, result. A specific, well-structured prompt leads to a precise, valuable result.</li>
-                            </ul>
+                    <p class="mb-6">Now try building a prompt for a real sourcing scenario. Fill in the blanks below to create a complete CRAFT prompt that you can use immediately in your work.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block font-semibold mb-2">Context (What's the situation?):</label>
+                            <textarea id="practice-context" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., I'm evaluating suppliers for campus dining services"></textarea>
                         </div>
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">The Goal of a Good Prompt</h3>
-                            <ul class="space-y-4 text-sm">
-                                <li>It's not a search query; it's a detailed instruction set.</li>
-                                <li>It should eliminate ambiguity and clearly define a successful outcome.</li>
-                            </ul>
+                        <div>
+                            <label class="block font-semibold mb-2">Role (Who should the AI act as?):</label>
+                            <textarea id="practice-role" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Act as a food service procurement expert"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Action (What should the AI do?):</label>
+                            <textarea id="practice-action" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Analyze the top 5 suppliers and provide recommendations"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Format (How should the output be structured?):</label>
+                            <textarea id="practice-format" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Present as a comparison table with pros and cons"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Tone (What style should be used?):</label>
+                            <textarea id="practice-tone" class="practice-textarea w-full p-3 border border-gray-300 rounded-lg" placeholder="e.g., Professional and objective"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex space-x-4">
+                        <button id="generate-practice-prompt" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+                            🚀 Generate My Prompt
+                        </button>
+                        <button id="clear-practice" class="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold">
+                            🗑️ Clear Form
+                        </button>
+                    </div>
+                    
+                    <div id="practice-output" class="mt-6 hidden">
+                        <h4 class="font-semibold mb-2">Your Complete CRAFT Prompt:</h4>
+                        <div id="practice-prompt-text" class="bg-white p-4 rounded-lg border text-sm whitespace-pre-wrap"></div>
+                        <button id="copy-prompt" class="mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm">
+                            📋 Copy to Clipboard
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prompt Templates Section -->
+            <section id="templates" class="scroll-mt-20">
+                <h2 class="section-title">Prompt Templates</h2>
+                <div class="section-card">
+                    <div class="space-y-4">
+                        <div class="bg-red-50 p-4 rounded-lg border">
+                            <h3 class="font-semibold mb-2">Supplier Research</h3>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Research <strong>[supplier name]</strong> and provide: 1) Company overview and size, 2) Key products/services, 3) Recent news or financial performance, 4) Potential risks or concerns, 5) Competitive advantages."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="supplier-research">📋 Copy Template</button>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border">
+                            <h3 class="font-semibold mb-2">Market Analysis</h3>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Analyze the <strong>[industry/market]</strong> for <strong>[product/service]</strong> and identify: 1) Current market trends, 2) Key players and their market share, 3) Pricing trends, 4) Supply chain challenges, 5) Future outlook."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="market-analysis">📋 Copy Template</button>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border">
+                            <h3 class="font-semibold mb-2">RFP Question Generator</h3>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Generate 15-20 detailed questions for an RFP for <strong>[service/product]</strong>. Include questions about: 1) Technical capabilities, 2) Experience and references, 3) Pricing structure, 4) Implementation timeline, 5) Support and maintenance."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="rfp-generator">📋 Copy Template</button>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border">
+                            <h3 class="font-semibold mb-2">Negotiation Strategy</h3>
+                            <p class="text-sm p-3 bg-white rounded my-2">"I am negotiating <strong>[contract type]</strong> with <strong>[vendor name]</strong>. My goal is to <strong>[specific objective]</strong>. What are 5 potential leverage points I could use? What objections might the vendor raise, and how can I respond?"</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="negotiation-strategy">📋 Copy Template</button>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border">
+                            <h3 class="font-semibold mb-2">Risk Assessment</h3>
+                            <p class="text-sm p-3 bg-white rounded my-2">"Assess the risks of partnering with <strong>[supplier name]</strong> for <strong>[product/service]</strong>. Consider: 1) Financial stability, 2) Operational capacity, 3) Geographic risks, 4) Technology dependencies, 5) Compliance requirements."</p>
+                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="risk-assessment">📋 Copy Template</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="anatomy" class="scroll-mt-20">
-                <h2 class="section-title">Part 2: The Anatomy of a Powerful Prompt</h2>
+            <!-- Part 8: AI Guidelines -->
+            <section id="guidelines" class="scroll-mt-20">
+                <h2 class="section-title">AI Guidelines</h2>
                 <div class="section-card">
-                    <div class="mb-6">
-                        <h3 class="font-bold text-xl mb-4">The C-R-A-F-T Framework</h3>
-                        <p class="text-sm mb-4">A memorable acronym for building great prompts that deliver precise, valuable results.</p>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h4 class="font-bold text-lg mb-2">C - Context</h4>
-                            <p class="text-sm mb-2"><strong>What it is:</strong> Set the scene for the AI. Tell it what information it needs to consider.</p>
-                            <p class="text-sm mb-2"><strong>Why it matters:</strong> Context narrows the AI's focus, leading to more relevant answers.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Example: "I am a sourcing manager at a large public university. We are currently evaluating suppliers for a new campus-wide landscaping contract."</em></p>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h4 class="font-bold text-lg mb-2">R - Role (or Persona)</h4>
-                            <p class="text-sm mb-2"><strong>What it is:</strong> Assign a specific role to the AI.</p>
-                            <p class="text-sm mb-2"><strong>Why it matters:</strong> This influences the tone, style, and expertise of the response.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Example: "Act as an expert in contract law with a specialty in vendor agreements." or "Act as a skeptical financial analyst."</em></p>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h4 class="font-bold text-lg mb-2">A - Action (The Task)</h4>
-                            <p class="text-sm mb-2"><strong>What it is:</strong> The specific verb or command you want the AI to perform.</p>
-                            <p class="text-sm mb-2"><strong>Why it matters:</strong> This is the core instruction. Use strong action verbs.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Examples: "Analyze," "Compare," "Draft," "Summarize," "Brainstorm," "Rewrite," "Translate."</em></p>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h4 class="font-bold text-lg mb-2">F - Format</h4>
-                            <p class="text-sm mb-2"><strong>What it is:</strong> Define the structure of the output.</p>
-                            <p class="text-sm mb-2"><strong>Why it matters:</strong> It makes the information immediately usable without extra work.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Examples: "...in a markdown table," "...as a bulleted list," "...as a professional email," "...in a JSON format," "...as a series of questions."</em></p>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border md:col-span-2">
-                            <h4 class="font-bold text-lg mb-2">T - Tone</h4>
-                            <p class="text-sm mb-2"><strong>What it is:</strong> Specify the desired writing style.</p>
-                            <p class="text-sm mb-2"><strong>Why it matters:</strong> Ensures the output is appropriate for the intended audience.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Examples: "...in a formal and professional tone," "...in a simple, easy-to-understand manner," "...in a persuasive and confident tone."</em></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="workshop" class="scroll-mt-20">
-                <h2 class="section-title">Part 3: Building Prompts with C-R-A-F-T</h2>
-                <div class="section-card">
-                    <div class="space-y-6">
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Exercise 1: Transforming a Vague Request</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <h4 class="font-semibold mb-2">Simple Prompt:</h4>
-                                    <p class="text-sm p-3"><em>"Tell me about supplier risks."</em></p>
+                    <div class="bg-red-200 border-l-4 border-red-500 text-red-900 p-6 rounded-r-lg">
+                        <p class="mb-6 font-semibold">Using AI responsibly is critical to protect university and supplier data. Understanding these limitations and adhering to policy is essential for everyone.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="ai-guideline-header mb-1">
+                                    <span class="emoji">🔒</span>
+                                    <h3 class="font-bold">Confidentiality is Key</h3>
                                 </div>
-                                <div>
-                                    <h4 class="font-semibold mb-2">Tailored Prompt using C-R-A-F-T:</h4>
-                                    <div class="space-y-4 text-sm">
-                                        <p><strong>(C)ontext:</strong> <em>"We are considering a five-year contract with a new, privately-owned IT hardware supplier based overseas."</em></p>
-                                        <p><strong>(R)ole:</strong> <em>"Act as a supply chain risk assessment expert."</em></p>
-                                        <p><strong>(A)ction:</strong> <em>"Brainstorm a list of potential risks associated with this partnership."</em></p>
-                                        <p><strong>(F)ormat:</strong> <em>"Organize the risks into three categories: financial, geopolitical, and operational. Present this as a bulleted list under each category heading."</em></p>
-                                        <p><strong>(T)one:</strong> <em>"Use a clear, concise, and objective tone."</em></p>
-                                    </div>
-                                </div>
+                                <p class="text-sm"><strong>NEVER</strong> input sensitive, confidential, or personally identifiable information (PII) from the university, suppliers, or employees into a public AI tool. Treat every prompt as if it were public.</p>
                             </div>
-                        </div>
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Exercise 2: The Iterative Process</h3>
-                            <p class="text-sm mb-4"><strong>Concept:</strong> Your first prompt is rarely your last. Show how to refine a prompt based on the AI's output.</p>
-                            <div class="space-y-4 text-sm">
-                                <div class="p-3 bg-white rounded">
-                                    <strong>Step 1:</strong> Run the good prompt from Exercise 1.
+                            <div>
+                                <div class="ai-guideline-header mb-1">
+                                    <span class="emoji">⚠️</span>
+                                    <h3 class="font-bold">AI Makes Mistakes</h3>
                                 </div>
-                                <div class="p-3 bg-white rounded">
-                                    <strong>Step 2:</strong> Analyze the output. Maybe it's too general.
-                                </div>
-                                <div class="p-3 bg-white rounded">
-                                    <strong>Step 3:</strong> <em>Refine the prompt:</em> "Excellent, now for each of the operational risks you identified, suggest one potential mitigation strategy that a university procurement team could implement."
-                                </div>
+                                <p class="text-sm">AI models can be wrong or "hallucinate" (make things up). <strong>ALWAYS</strong> fact-check critical information like supplier data, pricing, or contract clauses. The human is the final validator.</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="techniques" class="scroll-mt-20">
-                <h2 class="section-title">Part 4: Advanced Techniques</h2>
-                <div class="section-card">
-                    <div class="space-y-6">
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Few-Shot Prompting</h3>
-                            <p class="text-sm mb-3">Provide examples within your prompt to guide the AI's output format and style.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Example: "Rewrite the following sentences to be more concise. Example: 'At this point in time, we are of the opinion that...' should become 'We believe...'. Now, rewrite this: 'It is incumbent upon the vendor to ensure compliance...'"</em></p>
-                        </div>
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Chain-of-Thought</h3>
-                            <p class="text-sm mb-3">Ask the AI to explain its reasoning step-by-step for more accurate results on complex problems.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Example: "...Analyze the attached proposal and determine the best value. Explain your reasoning step-by-step, considering initial cost, long-term support, and implementation time."</em></p>
-                        </div>
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Negative Constraints</h3>
-                            <p class="text-sm mb-3">Tell the AI what NOT to do to avoid unwanted outputs.</p>
-                            <p class="text-sm p-3 bg-white rounded"><em>Example: "...Draft an email to the supplier. Do not mention specific budget numbers and avoid making any promises about contract length."</em></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="conclusion" class="scroll-mt-20">
-                <h2 class="section-title">Part 5: Conclusion & Q&A</h2>
-                <div class="section-card">
-                    <div class="space-y-6">
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Key Takeaways</h3>
-                            <ul class="space-y-4 text-sm">
-                                <li><strong>Master the C-R-A-F-T Framework:</strong> Context, Role, Action, Format, Tone</li>
-                                <li><strong>Practice Makes Perfect:</strong> Prompting is a skill that improves with practice</li>
-                                <li><strong>Be a Co-Pilot:</strong> Guide the AI to produce the work you need</li>
-                                <li><strong>Iterate and Refine:</strong> Your first prompt is rarely your last</li>
-                            </ul>
-                        </div>
-                        <div class="bg-red-50 p-6 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-3">Next Steps</h3>
-                            <ul class="space-y-4 text-sm">
-                                <li>Practice the C-R-A-F-T framework with your daily tasks</li>
-                                <li>Experiment with different techniques (few-shot, chain-of-thought, negative constraints)</li>
-                                <li>Share successful prompts with your team</li>
-                                <li>Continue learning through the Resources page</li>
-                            </ul>
+                            <div>
+                                <div class="ai-guideline-header mb-1">
+                                    <span class="emoji">✅</span>
+                                    <h3 class="font-bold">It's a First Draft, Not a Final Product</h3>
+                                </div>
+                                <p class="text-sm">Use AI to create a starting point, not the finished work. Your expertise is required to refine, edit, and approve the output. AI is a co-pilot, not the pilot.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,20 +191,38 @@
                         block: 'start'
                     });
                 }
-                // For external links (like home.html), let the browser handle navigation
             });
         });
 
-        // Sidebar navigation functionality
+        // Sidebar functionality
+        const sidebar = document.getElementById('sidebar');
+        const sidebarTrigger = document.querySelector('.sidebar-trigger');
         const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        sidebarTrigger.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Handle sidebar navigation
         sidebarLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
                 
                 // Update active state
                 sidebarLinks.forEach(l => l.classList.remove('active'));
@@ -256,7 +232,7 @@
 
         // Update active state based on scroll position
         function updateActiveSection() {
-            const sections = ['training', 'foundation', 'anatomy', 'workshop', 'techniques', 'conclusion'];
+            const sections = ['training', 'practice', 'templates', 'guidelines'];
             const scrollPosition = window.scrollY + 100; // Offset for better detection
             
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -279,7 +255,165 @@
         
         // Initial active state
         updateActiveSection();
+
+        // Practice exercise functionality
+        const generatePracticeBtn = document.getElementById('generate-practice-prompt');
+        const clearPracticeBtn = document.getElementById('clear-practice');
+        const practiceOutput = document.getElementById('practice-output');
+        const practicePromptText = document.getElementById('practice-prompt-text');
+        const copyPromptBtn = document.getElementById('copy-prompt');
+
+        if (generatePracticeBtn) {
+            generatePracticeBtn.addEventListener('click', () => {
+                const context = document.getElementById('practice-context').value.trim();
+                const role = document.getElementById('practice-role').value.trim();
+                const action = document.getElementById('practice-action').value.trim();
+                const format = document.getElementById('practice-format').value.trim();
+                const tone = document.getElementById('practice-tone').value.trim();
+
+                if (!context || !role || !action || !format || !tone) {
+                    alert('Please fill in all fields to generate your prompt!');
+                    return;
+                }
+
+                const completePrompt = `${context}\n\n${role}\n\n${action}\n\n${format}\n\n${tone}`;
+                practicePromptText.textContent = completePrompt;
+                practiceOutput.classList.remove('hidden');
+            });
+        }
+
+        if (clearPracticeBtn) {
+            clearPracticeBtn.addEventListener('click', () => {
+                document.getElementById('practice-context').value = '';
+                document.getElementById('practice-role').value = '';
+                document.getElementById('practice-action').value = '';
+                document.getElementById('practice-format').value = '';
+                document.getElementById('practice-tone').value = '';
+                practiceOutput.classList.add('hidden');
+            });
+        }
+
+        if (copyPromptBtn) {
+            copyPromptBtn.addEventListener('click', () => {
+                const promptText = practicePromptText.textContent;
+                navigator.clipboard.writeText(promptText).then(() => {
+                    copyPromptBtn.textContent = '✅ Copied!';
+                    copyPromptBtn.style.backgroundColor = '#059669';
+                    setTimeout(() => {
+                        copyPromptBtn.textContent = '📋 Copy to Clipboard';
+                        copyPromptBtn.style.backgroundColor = '';
+                    }, 2000);
+                }).catch(() => {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = promptText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    copyPromptBtn.textContent = '✅ Copied!';
+                    copyPromptBtn.style.backgroundColor = '#059669';
+                    setTimeout(() => {
+                        copyPromptBtn.textContent = '📋 Copy to Clipboard';
+                        copyPromptBtn.style.backgroundColor = '';
+                    }, 2000);
+                });
+            });
+        }
+
+        // Copy template functionality
+        const copyButtons = document.querySelectorAll('.copy-template-btn');
+        copyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const templateType = button.getAttribute('data-template');
+                const templates = {
+                    'supplier-research': {
+                        title: 'Supplier Research Template',
+                        content: `Research [supplier name] and provide:
+1) Company overview and size
+2) Key products/services
+3) Recent news or financial performance
+4) Potential risks or concerns
+5) Competitive advantages
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'market-analysis': {
+                        title: 'Market Analysis Template',
+                        content: `Analyze the [industry/market] for [product/service] and identify:
+1) Current market trends
+2) Key players and their market share
+3) Pricing trends
+4) Supply chain challenges
+5) Future outlook
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'rfp-generator': {
+                        title: 'RFP Question Generator Template',
+                        content: `Generate 15-20 detailed questions for an RFP for [service/product]. Include questions about:
+1) Technical capabilities
+2) Experience and references
+3) Pricing structure
+4) Implementation timeline
+5) Support and maintenance
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'negotiation-strategy': {
+                        title: 'Negotiation Strategy Template',
+                        content: `I am negotiating [contract type] with [vendor name]. My goal is to [specific objective].
+
+What are 5 potential leverage points I could use? What objections might the vendor raise, and how can I respond?
+
+Additional context: [Add any specific requirements or focus areas]`
+                    },
+                    'risk-assessment': {
+                        title: 'Risk Assessment Template',
+                        content: `Assess the risks of partnering with [supplier name] for [product/service]. Consider:
+1) Financial stability
+2) Operational capacity
+3) Geographic risks
+4) Technology dependencies
+5) Compliance requirements
+
+Additional context: [Add any specific requirements or focus areas]`
+                    }
+                };
+
+                const template = templates[templateType];
+                if (template) {
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(template.content).then(() => {
+                        // Show success message
+                        button.textContent = '✅ Copied!';
+                        button.style.backgroundColor = '#059669';
+                        setTimeout(() => {
+                            button.textContent = '📋 Copy Template';
+                            button.style.backgroundColor = '';
+                        }, 2000);
+                    }).catch(() => {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = template.content;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        
+                        // Show success message
+                        button.textContent = '✅ Copied!';
+                        button.style.backgroundColor = '#059669';
+                        setTimeout(() => {
+                            button.textContent = '📋 Copy Template';
+                            button.style.backgroundColor = '';
+                        }, 2000);
+                    });
+                }
+            });
+        });
     });
     </script>
 </body>
-</html> 
+</html>

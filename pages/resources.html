@@ -26,10 +26,6 @@
                     <div class="sidebar-line-item"></div>
                     <span class="sidebar-text">AI Tools & Platforms</span>
                 </a></li>
-                <li><a href="#prompt-templates" class="sidebar-link" data-section="prompt-templates">
-                    <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Prompt Templates</span>
-                </a></li>
                 <li><a href="#best-practices" class="sidebar-link" data-section="best-practices">
                     <div class="sidebar-line-item"></div>
                     <span class="sidebar-text">Best Practices</span>
@@ -100,39 +96,6 @@
                 </div>
             </section>
 
-            <section id="prompt-templates" class="scroll-mt-20">
-                <h2 class="section-title">Prompt Templates</h2>
-                <div class="section-card">
-                    <div class="space-y-4">
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h3 class="font-semibold mb-2">Supplier Research</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"Research <strong>[supplier name]</strong> and provide: 1) Company overview and size, 2) Key products/services, 3) Recent news or financial performance, 4) Potential risks or concerns, 5) Competitive advantages."</p>
-                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="supplier-research">📋 Copy Template</button>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h3 class="font-semibold mb-2">Market Analysis</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"Analyze the <strong>[industry/market]</strong> for <strong>[product/service]</strong> and identify: 1) Current market trends, 2) Key players and their market share, 3) Pricing trends, 4) Supply chain challenges, 5) Future outlook."</p>
-                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="market-analysis">📋 Copy Template</button>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h3 class="font-semibold mb-2">RFP Question Generator</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"Generate 15-20 detailed questions for an RFP for <strong>[service/product]</strong>. Include questions about: 1) Technical capabilities, 2) Experience and references, 3) Pricing structure, 4) Implementation timeline, 5) Support and maintenance."</p>
-                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="rfp-generator">📋 Copy Template</button>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h3 class="font-semibold mb-2">Negotiation Strategy</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"I am negotiating <strong>[contract type]</strong> with <strong>[vendor name]</strong>. My goal is to <strong>[specific objective]</strong>. What are 5 potential leverage points I could use? What objections might the vendor raise, and how can I respond?"</p>
-                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="negotiation-strategy">📋 Copy Template</button>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border">
-                            <h3 class="font-semibold mb-2">Risk Assessment</h3>
-                            <p class="text-sm p-3 bg-white rounded my-2">"Assess the risks of partnering with <strong>[supplier name]</strong> for <strong>[product/service]</strong>. Consider: 1) Financial stability, 2) Operational capacity, 3) Geographic risks, 4) Technology dependencies, 5) Compliance requirements."</p>
-                            <button class="copy-template-btn mt-2 text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors" data-template="risk-assessment">📋 Copy Template</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section id="best-practices" class="scroll-mt-20">
                 <h2 class="section-title">Best Practices</h2>
                 <div class="section-card">
@@ -166,6 +129,11 @@
                         <h3 class="font-semibold mb-2">Anthropic Prompt Library</h3>
                         <p class="text-sm mb-3">Explore optimized prompts for a breadth of business and personal tasks, curated by Anthropic for use with Claude and other AI models.</p>
                         <a href="https://docs.anthropic.com/en/resources/prompt-library/library" target="_blank" class="text-red-600 hover:text-red-800 underline text-sm">Visit Anthropic Prompt Library →</a>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg border">
+                        <h3 class="font-semibold mb-2">Rutgers IT AI Resources</h3>
+                        <p class="text-sm mb-3">Official Rutgers IT guidance and resources for AI at the university, including AI assistants, tools, policies, and learning resources available to the Rutgers community.</p>
+                        <a href="https://it.rutgers.edu/ai/" target="_blank" class="text-red-600 hover:text-red-800 underline text-sm">Visit Rutgers IT AI Resources →</a>
                     </div>
                 </div>
             </div>
@@ -279,7 +247,7 @@
 
         // Update active state based on scroll position
         function updateActiveSection() {
-            const sections = ['resources', 'ai-tools', 'prompt-templates', 'best-practices', 'useful-links', 'feedback'];
+            const sections = ['resources', 'ai-tools', 'best-practices', 'useful-links', 'feedback'];
             const scrollPosition = window.scrollY + 100; // Offset for better detection
             
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -302,98 +270,6 @@
         
         // Initial active state
         updateActiveSection();
-
-        // Copy template functionality
-        const copyButtons = document.querySelectorAll('.copy-template-btn');
-        copyButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const templateType = button.getAttribute('data-template');
-                const templates = {
-                    'supplier-research': {
-                        title: 'Supplier Research Template',
-                        content: `Research [supplier name] and provide:
-1) Company overview and size
-2) Key products/services
-3) Recent news or financial performance
-4) Potential risks or concerns
-5) Competitive advantages
-
-Additional context: [Add any specific requirements or focus areas]`
-                    },
-                    'market-analysis': {
-                        title: 'Market Analysis Template',
-                        content: `Analyze the [industry/market] for [product/service] and identify:
-1) Current market trends
-2) Key players and their market share
-3) Pricing trends
-4) Supply chain challenges
-5) Future outlook
-
-Additional context: [Add any specific requirements or focus areas]`
-                    },
-                    'rfp-generator': {
-                        title: 'RFP Question Generator Template',
-                        content: `Generate 15-20 detailed questions for an RFP for [service/product]. Include questions about:
-1) Technical capabilities
-2) Experience and references
-3) Pricing structure
-4) Implementation timeline
-5) Support and maintenance
-
-Additional context: [Add any specific requirements or focus areas]`
-                    },
-                    'negotiation-strategy': {
-                        title: 'Negotiation Strategy Template',
-                        content: `I am negotiating [contract type] with [vendor name]. My goal is to [specific objective].
-
-What are 5 potential leverage points I could use? What objections might the vendor raise, and how can I respond?
-
-Additional context: [Add any specific requirements or focus areas]`
-                    },
-                    'risk-assessment': {
-                        title: 'Risk Assessment Template',
-                        content: `Assess the risks of partnering with [supplier name] for [product/service]. Consider:
-1) Financial stability
-2) Operational capacity
-3) Geographic risks
-4) Technology dependencies
-5) Compliance requirements
-
-Additional context: [Add any specific requirements or focus areas]`
-                    }
-                };
-
-                const template = templates[templateType];
-                if (template) {
-                    // Copy to clipboard
-                    navigator.clipboard.writeText(template.content).then(() => {
-                        // Show success message
-                        button.textContent = '✅ Copied!';
-                        button.style.backgroundColor = '#059669';
-                        setTimeout(() => {
-                            button.textContent = '📋 Copy Template';
-                            button.style.backgroundColor = '';
-                        }, 2000);
-                    }).catch(() => {
-                        // Fallback for older browsers
-                        const textArea = document.createElement('textarea');
-                        textArea.value = template.content;
-                        document.body.appendChild(textArea);
-                        textArea.select();
-                        document.execCommand('copy');
-                        document.body.removeChild(textArea);
-                        
-                        // Show success message
-                        button.textContent = '✅ Copied!';
-                        button.style.backgroundColor = '#059669';
-                        setTimeout(() => {
-                            button.textContent = '📋 Copy Template';
-                            button.style.backgroundColor = '';
-                        }, 2000);
-                    });
-                }
-            });
-        });
 
         // Feedback form functionality (development version)
         const feedbackForm = document.getElementById('feedback-form');
