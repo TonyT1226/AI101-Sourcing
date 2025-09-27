@@ -6,78 +6,85 @@ An interactive training platform designed to help Rutgers University procurement
 
 This web-based training platform provides comprehensive education on AI fundamentals, prompt engineering, and practical applications for strategic sourcing professionals. The content is structured to be accessible for beginners while providing valuable insights for experienced practitioners.
 
-## 🆕 What's New in Version 1.2
+## 🆕 What's New in Version 1.3
 
-This major update (July 22, 2025) introduces significant enhancements to the learning experience:
+This major update (September 27, 2025) transforms the platform into a search-first experience with comprehensive content reorganization:
 
-### 🎯 **Interactive Practice Section**
-- **NEW Section 3**: Hands-on CRAFT framework practice with real-time prompt building
-- User input forms with validation and instant feedback
-- One-click copy-to-clipboard for generated prompts
+### 🔍 **Search-First Home Page Design**
+- **Massive Search Hub** - Prominent search interface as the primary user entry point
+- **Search Suggestions** - Popular search terms with quick access buttons
+- **Category Filters** - Quick access to AI Basics, Prompting, Templates, and Tools
+- **Search Results Container** - Ready for future search functionality implementation
+- **Recent Searches** - Placeholder for search history functionality
 
-### 📋 **Professional Prompt Templates**
-- 5 ready-to-use templates with bold placeholders for easy customization:
-  - Supplier Research Template
-  - Market Analysis Template
-  - RFP Question Generator Template
-  - Negotiation Strategy Template
-  - Risk Assessment Template
+### 📚 **Content Reorganization & Training Integration**
+- **Streamlined Home Page** - Removed all content except "What is AI & Why Should We Care?" section
+- **Comprehensive Training Page** - Integrated all training content into modular learning structure
+- **Training Subpages** - Created specialized modules:
+  - `training-basics.html` - Foundation, CRAFT Framework, Interactive Workshop
+  - `training-applications.html` - Productivity, Sourcing, Advanced Techniques
+- **Logical Learning Flow** - Practice → Templates → Guidelines progression
 
-### 📝 **Enhanced User Experience**
-- Complete feedback collection system for continuous improvement
-- Streamlined content organization (6 sections → 5 focused sections)
-- Advanced styling with improved responsive design
-- Better navigation with descriptive section names
+### 🧭 **Professional Navigation Enhancement**
+- **Navbar Dropdown Menu** - Professional dropdown in main navigation for training modules
+- **Mobile Responsive** - Dropdown works seamlessly on all screen sizes
+- **Clean Navigation** - Removed redundant navigation links from subpages
+- **Consistent UX** - Global navigation available on all pages
+
+### 📋 **Training Content Optimization**
+- **Prompt Templates Integration** - Moved from Resources to Training page as second section
+- **Section Order Fixed** - Build Your Own Prompt → Prompt Templates → AI Guidelines
+- **Clean Section Titles** - Removed "Part X:" prefixes for cleaner UI
+- **Conclusion Section Removed** - Streamlined content without redundant conclusion
+
+### 🔗 **University Integration**
+- **Rutgers IT AI Resources** - Added official university AI guidance link
+- **Policy Compliance** - Links to Academic Integrity, Information Classification, and Acceptable Use policies
+- **AI Tools Access** - Microsoft Copilot, Google Gemini, NotebookLM, ChatGPT Edu
 
 ### 🔧 **Technical Improvements**
-- Enhanced JavaScript functionality with form validation
-- Advanced clipboard operations with fallback support
-- Improved component system with synchronized fallbacks
-- Cross-browser compatibility enhancements
+- **Enhanced Component Architecture** - Updated navbar with dropdown functionality and fallback support
+- **Advanced CSS Styling** - Added comprehensive dropdown styles with hover animations
+- **JavaScript Integration** - Updated component loading with proper fallback handling
+- **Mobile Responsiveness** - Added mobile-specific dropdown adjustments
 
 ## ✨ Features
 
-- **Interactive Learning Modules**: 5 streamlined sections with improved learning progression
+- **Search-First Design**: Massive search hub as primary user entry point with suggestions and category filters
+- **Modular Training Structure**: Comprehensive learning modules with specialized subpages
+- **Professional Navigation**: Dropdown menu with mobile-responsive design
+- **Interactive Learning Modules**: Streamlined sections with logical learning progression
 - **CRAFT Framework Workshop**: Interactive prompt engineering training with hands-on practice exercises
 - **Interactive Practice Section**: Real-time prompt builder with copy-to-clipboard functionality
-- **Professional Prompt Templates**: 5 copy-to-clipboard templates for immediate workplace use
+- **Professional Prompt Templates**: 5 copy-to-clipboard templates integrated into training flow
+- **University Integration**: Official Rutgers IT AI resources and policy compliance links
 - **Complete Feedback System**: User feedback collection for continuous improvement
 - **Enhanced Resource Library**: Curated AI tools, templates, and best practices
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Rutgers Branding**: Official university colors and modern UI styling
 
-## 📚 Home Content Sections
+## 📚 Content Structure
 
-### 1. AI Basics
-- Understanding what AI is and isn't
-- Generative vs. traditional AI
-- Real-world AI applications in daily life
-- Why AI matters for strategic sourcing
+### 🏠 **Home Page (Search-First)**
+1. **Welcome Message** - Introduction to AI training
+2. **Search Hub** - Primary interface for content discovery with suggestions and filters
+3. **AI Basics** - "What is AI & Why Should We Care?" (moved to end)
 
-### 2. The Art of Prompting
-- The CRAFT framework (Context, Role, Action, Format, Tone)
-- Step-by-step prompt construction methodology
-- Best practices for effective AI communication
+### 📚 **Training Page (Main)**
+1. **Training Overview** - Introduction and description
+2. **Build Your Own Prompt** - Interactive practice exercise with CRAFT framework
+3. **Prompt Templates** - Ready-to-use templates with copy functionality
+4. **AI Guidelines** - Best practices and university policies
 
-### 3. Practice Exercise
-- **NEW**: Interactive hands-on CRAFT framework practice
-- Real-time prompt builder with user inputs
-- One-click copy-to-clipboard functionality
-- Form validation and instant feedback
+### 📖 **Training Subpages**
+- **Training Basics** (`training-basics.html`) - Foundation, CRAFT Framework, Interactive Workshop
+- **Training Applications** (`training-applications.html`) - Productivity, Sourcing, Advanced Techniques
 
-### 4. Everyday Productivity
-- Document summarization and analysis
-- Email and agenda drafting
-- Information reformatting and restructuring
-- Meeting preparation assistance
-
-### 5. Level Up Sourcing
-- Market intelligence gathering and analysis
-- Supplier identification and comprehensive vetting
-- RFP development and question generation
-- Negotiation strategy development
-- Risk assessment and mitigation
-- Complex document analysis and review
+### 🛠️ **Resources Page**
+1. **AI Tools & Platforms** - External AI tools and tutorials
+2. **Best Practices** - Data security and verification guidelines
+3. **Useful Links** - External resources including Rutgers IT AI Resources
+4. **Feedback Form** - User feedback collection (development version)
 
 ## 🛠️ Technical Details
 
@@ -106,17 +113,23 @@ This major update (July 22, 2025) introduces significant enhancements to the lea
 
 ```
 ├── index.html                 # Entry point (redirects to home)
-├── style.css                  # Main stylesheet
+├── style.css                  # Main stylesheet with search hub and dropdown styles
 ├── js/
-│   └── components.js          # Component loader and navigation
+│   └── components.js          # Component loader and navigation with dropdown support
 ├── components/                # Reusable UI components
 │   ├── header.html
-│   ├── navbar.html
+│   ├── navbar.html            # Updated with dropdown functionality
 │   └── footer.html
 ├── pages/                     # Main content pages
-│   ├── home.html             # Primary training content
-│   ├── training.html         # Detailed workshop
-│   └── resources.html        # Tools and resources
+│   ├── home.html             # Search-first design with massive search hub
+│   ├── training.html         # Main training page with practice, templates, guidelines
+│   ├── training-basics.html  # Foundation, CRAFT Framework, Interactive Workshop
+│   ├── training-applications.html # Productivity, Sourcing, Advanced Techniques
+│   └── resources.html        # Tools, resources, and Rutgers IT AI links
+├── project docs/              # Documentation
+│   ├── UPDATE_NOTES_0927.md  # Version 1.3 update notes
+│   ├── VERSION_1.3_OBJECTIVES.md # Version 1.3 objectives and roadmap
+│   └── [other documentation]
 └── photo/                     # Images and assets
     ├── header.png
     └── [other images]
@@ -139,11 +152,21 @@ The training includes comprehensive guidelines for:
 
 ## 📈 Future Enhancements
 
-- [x] ~~Interactive practice exercises~~ ✅ **Completed in v1.2**
-- [x] ~~Copy-to-clipboard prompt templates~~ ✅ **Completed in v1.2**
-- [x] ~~User feedback collection system~~ ✅ **Completed in v1.2**
+### ✅ **Completed in v1.3**
+- [x] ~~Search-first home page design~~ ✅ **Completed**
+- [x] ~~Content reorganization and training integration~~ ✅ **Completed**
+- [x] ~~Professional navbar dropdown navigation~~ ✅ **Completed**
+- [x] ~~Modular training subpages~~ ✅ **Completed**
+- [x] ~~University integration with Rutgers IT AI resources~~ ✅ **Completed**
+
+### 🔄 **Planned for v1.4**
+- [ ] **Client-side search functionality** - JavaScript search implementation across all content
+- [ ] **Search result highlighting** - Content highlighting and suggestions
+- [ ] **Search history** - Local storage for recent searches
+- [ ] **Advanced filtering** - Content type and category filtering
+
+### 🚀 **Future Versions**
 - [ ] Backend integration for feedback form processing
-- [ ] Search functionality across content sections
 - [ ] Progress tracking between sessions with local storage
 - [ ] Template customization and user-saved templates
 - [ ] Print-friendly content versions
@@ -162,6 +185,6 @@ This project is created for educational purposes at Rutgers University.
 ---
 
 **Developed by**: Qiyuan (Tony) Tang  
-**Last Updated**: July 22, 2025  
-**Version**: 1.2  
+**Last Updated**: September 27, 2025  
+**Version**: 1.3  
 **Website**: https://tonyt1226.github.io/AI101-Sourcing/pages/home.html
