@@ -6,6 +6,26 @@ An interactive training platform designed to help Rutgers University procurement
 
 This web-based training platform provides comprehensive education on AI fundamentals, prompt engineering, and practical applications for strategic sourcing professionals. The content is structured to be accessible for beginners while providing valuable insights for experienced practitioners.
 
+## 🆕 What's New in Version 1.4.1
+
+This UI enhancement update (September 29, 2025) brings a comprehensive visual refresh with professional styling and modern design elements:
+
+### 🎨 **Professional UI Refresh**
+- **Modern Design System** - Comprehensive UI refresh with professional styling and modern aesthetics
+- **Enhanced Color Palette** - Modern gradients and improved contrast throughout the interface
+- **Professional Typography** - Improved font weights, spacing, and readability
+- **Smooth Animations** - Subtle transitions and hover effects for better interactivity
+- **Modern Card Designs** - Enhanced article cards, template cards, and section cards
+- **Mobile Optimization** - Better responsive design and mobile experience
+
+### 🔧 **Technical Improvements**
+- **CSS Custom Properties** - Modern color system and consistent theming
+- **Professional Shadow System** - Layered shadow system for depth and professionalism
+- **Enhanced Interactive Elements** - Modernized buttons, forms, and navigation elements
+- **Professional Modals** - Enhanced modal styling with backdrop blur and smooth animations
+
+---
+
 ## 🆕 What's New in Version 1.4
 
 This major update (September 29, 2025) introduces a comprehensive Template Warehouse system that revolutionizes how procurement professionals access and use AI prompts:
