@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Warehouse - AI Training for Strategic Sourcing</title>
+    <link rel="icon" type="image/x-icon" href="../photo/favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-trigger">
+            <div class="sidebar-line"></div>
+            <div class="sidebar-line"></div>
+            <div class="sidebar-line"></div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-list">
+                <li><a href="#template-warehouse" class="sidebar-link" data-section="template-warehouse">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Template Warehouse</span>
+                </a></li>
+                <li><a href="#template-categories" class="sidebar-link" data-section="template-categories">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Categories</span>
+                </a></li>
+                <li><a href="#template-library" class="sidebar-link" data-section="template-library">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Template Library</span>
+                </a></li>
+                <li><a href="#create-template" class="sidebar-link" data-section="create-template">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">Create Template</span>
+                </a></li>
+                <li><a href="#my-templates" class="sidebar-link" data-section="my-templates">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">My Templates</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Navbar placeholder -->
+    <div id="navbar-placeholder"></div>
+    
+    <main class="main-content">
+        <section id="template-warehouse" class="section-card text-center mb-16 pt-8">
+            <h1 class="section-title">Template Warehouse</h1>
+            <p class="section-subtitle max-w-3xl mx-auto mb-8">Discover, create, and manage AI prompt templates for strategic sourcing. Find the perfect template for your needs or create your own custom templates.</p>
+            
+            <!-- Template Search -->
+            <div class="template-search-container mb-8">
+                <div class="template-search-wrapper">
+                    <input type="text" id="template-search-input" placeholder="Search templates by category, use case, or keywords..." class="template-search-input">
+                    <button id="template-search-btn" class="template-search-btn">🔍 Search</button>
+                    <button id="clear-template-search" class="clear-template-search-btn" style="display: none;">✕</button>
+                </div>
+                
+                <!-- Template Search Results -->
+                <div id="template-search-results" class="template-search-results hidden">
+                    <div class="template-results-header">
+                        <h3>Template Search Results</h3>
+                        <div class="template-results-count"></div>
+                    </div>
+                    <div id="template-results-list" class="template-results-list"></div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="space-y-12">
+            <!-- Template Categories -->
+            <section id="template-categories" class="scroll-mt-20">
+                <h2 class="section-title">Template Categories</h2>
+                <div class="section-card">
+                    <div class="template-categories-grid">
+                        <div class="template-category-card" data-category="supplier-research">
+                            <div class="category-icon">🔍</div>
+                            <h3 class="category-title">Supplier Research</h3>
+                            <p class="category-description">Templates for researching suppliers, evaluating capabilities, and gathering market intelligence.</p>
+                            <div class="category-count">13 templates</div>
+                        </div>
+                        <div class="template-category-card" data-category="spend-analysis">
+                            <div class="category-icon">📈</div>
+                            <h3 class="category-title">Spend Analysis</h3>
+                            <p class="category-description">Templates for analyzing procurement spend data, identifying trends, and uncovering cost optimization opportunities.</p>
+                            <div class="category-count">1 template</div>
+                        </div>
+                        <div class="template-category-card" data-category="rfp-management">
+                            <div class="category-icon">📋</div>
+                            <h3 class="category-title">RFP Management</h3>
+                            <p class="category-description">Templates for creating RFPs, evaluating responses, and managing procurement processes.</p>
+                            <div class="category-count">15 templates</div>
+                        </div>
+                        <div class="template-category-card" data-category="negotiation">
+                            <div class="category-icon">🤝</div>
+                            <h3 class="category-title">Negotiation</h3>
+                            <p class="category-description">Templates for negotiation strategies, contract terms, and supplier discussions.</p>
+                            <div class="category-count">10 templates</div>
+                        </div>
+                        <div class="template-category-card" data-category="risk-assessment">
+                            <div class="category-icon">⚠️</div>
+                            <h3 class="category-title">Risk Assessment</h3>
+                            <p class="category-description">Templates for identifying, analyzing, and mitigating procurement risks.</p>
+                            <div class="category-count">7 templates</div>
+                        </div>
+                        <div class="template-category-card" data-category="contract-management">
+                            <div class="category-icon">📄</div>
+                            <h3 class="category-title">Contract Management</h3>
+                            <p class="category-description">Templates for contract creation, review, and management processes.</p>
+                            <div class="category-count">9 templates</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Template Library -->
+            <section id="template-library" class="scroll-mt-20">
+                <h2 class="section-title">Template Library</h2>
+                <div class="section-card">
+                    <div class="template-library-header">
+                        <div class="template-filters">
+                            <button class="filter-btn active" data-filter="all">All Templates</button>
+                            <button class="filter-btn" data-filter="supplier-research">Supplier Research</button>
+                            <button class="filter-btn" data-filter="spend-analysis">Spend Analysis</button>
+                            <button class="filter-btn" data-filter="rfp-management">RFP Management</button>
+                            <button class="filter-btn" data-filter="negotiation">Negotiation</button>
+                            <button class="filter-btn" data-filter="risk-assessment">Risk Assessment</button>
+                            <button class="filter-btn" data-filter="contract-management">Contract Management</button>
+                        </div>
+                        <div class="template-sort">
+                            <select id="template-sort" class="template-sort-select">
+                                <option value="name">Sort by Name</option>
+                                <option value="category">Sort by Category</option>
+                                <option value="popularity">Sort by Popularity</option>
+                                <option value="recent">Sort by Recent</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="template-grid" class="template-grid">
+                        <!-- Templates will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Create Template -->
+            <section id="create-template" class="scroll-mt-20">
+                <h2 class="section-title">Create Custom Template</h2>
+                <div class="section-card">
+                    <div class="create-template-form">
+                        <form id="template-form" class="space-y-6">
+                            <div class="form-group">
+                                <label for="template-name" class="form-label">Template Name *</label>
+                                <input type="text" id="template-name" name="template-name" class="form-input" placeholder="Enter template name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="template-category" class="form-label">Category *</label>
+                                <select id="template-category" name="template-category" class="form-select" required>
+                                    <option value="">Select a category</option>
+                                    <option value="supplier-research">Supplier Research</option>
+                                    <option value="spend-analysis">Spend Analysis</option>
+                                    <option value="rfp-management">RFP Management</option>
+                                    <option value="negotiation">Negotiation</option>
+                                    <option value="risk-assessment">Risk Assessment</option>
+                                    <option value="contract-management">Contract Management</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="template-description" class="form-label">Description</label>
+                                <textarea id="template-description" name="template-description" class="form-textarea" rows="3" placeholder="Describe what this template is used for"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="template-content" class="form-label">Template Content *</label>
+                                <textarea id="template-content" name="template-content" class="form-textarea template-content-textarea" rows="8" placeholder="Enter your prompt template here. Use [PLACEHOLDER] for variables that users can customize." required></textarea>
+                                <div class="form-help">Use [PLACEHOLDER] for variables that users can customize. Example: [COMPANY_NAME], [PRODUCT_TYPE], [BUDGET_RANGE]</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="template-tags" class="form-label">Tags (comma-separated)</label>
+                                <input type="text" id="template-tags" name="template-tags" class="form-input" placeholder="e.g., sourcing, research, analysis">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Create Template</button>
+                                <button type="button" id="preview-template" class="btn-secondary">Preview Template</button>
+                                <button type="reset" class="btn-outline">Reset Form</button>
+                            </div>
+                        </form>
+                        
+                        <!-- Template Preview -->
+                        <div id="template-preview" class="template-preview hidden">
+                            <h3>Template Preview</h3>
+                            <div class="preview-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Templates -->
+            <section id="my-templates" class="scroll-mt-20">
+                <h2 class="section-title">My Templates</h2>
+                <div class="section-card">
+                    <div class="my-templates-header">
+                        <p class="my-templates-description">Your custom templates saved locally in your browser.</p>
+                        <div class="my-templates-actions">
+                            <button id="export-templates" class="btn-secondary">Export Templates</button>
+                            <button id="import-templates" class="btn-secondary">Import Templates</button>
+                            <input type="file" id="import-file" accept=".json" style="display: none;">
+                        </div>
+                    </div>
+                    
+                    <div id="my-templates-grid" class="my-templates-grid">
+                        <!-- User templates will be loaded dynamically -->
+                    </div>
+                    
+                    <div id="no-templates" class="no-templates hidden">
+                        <div class="no-templates-content">
+                            <div class="no-templates-icon">📝</div>
+                            <h3>No Custom Templates Yet</h3>
+                            <p>Create your first custom template using the form above, or import existing templates.</p>
+                            <button class="btn-primary" onclick="document.getElementById('create-template').scrollIntoView({behavior: 'smooth'})">Create Template</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Template Preview Modal -->
+    <div id="template-preview-modal" class="template-preview-modal hidden">
+        <div class="template-preview-overlay" onclick="templateWarehouse.hideTemplatePreview()"></div>
+        <div class="template-preview-content">
+            <div class="template-preview-header">
+                <h3>Template Preview</h3>
+                <button class="template-preview-close" onclick="templateWarehouse.hideTemplatePreview()">×</button>
+            </div>
+            <div class="preview-content"></div>
+        </div>
+    </div>
+    
+    <script src="../js/components.js"></script>
+    <script src="../js/template-warehouse.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.navbar-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Only prevent default for anchor links (same page)
+                if (link.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // For external links, let the browser handle navigation
+            });
+        });
+
+        // Sidebar navigation functionality
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Update active state
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        // Update active state based on scroll position
+        function updateActiveSection() {
+            const sections = ['template-warehouse', 'template-categories', 'template-library', 'create-template', 'my-templates'];
+            const scrollPosition = window.scrollY + 100; // Offset for better detection
+            
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i]);
+                if (section && section.offsetTop <= scrollPosition) {
+                    // Update sidebar active state
+                    sidebarLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-section') === sections[i]) {
+                            link.classList.add('active');
+                        }
+                    });
+                    break;
+                }
+            }
+        }
+
+        // Listen for scroll events to update active section
+        window.addEventListener('scroll', updateActiveSection);
+        
+        // Initial active state
+        updateActiveSection();
+    });
+    </script>
+</body>
+</html>

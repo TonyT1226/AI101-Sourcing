@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Training for Strategic Sourcing</title>
+    <link rel="icon" type="image/x-icon" href="../photo/favicon.ico">
     <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -23,13 +24,13 @@
                     <div class="sidebar-line-item"></div>
                     <span class="sidebar-text">Home</span>
                 </a></li>
-                <li><a href="#search-hub" class="sidebar-link" data-section="search-hub">
-                    <div class="sidebar-line-item"></div>
-                    <span class="sidebar-text">Search Hub</span>
-                </a></li>
                 <li><a href="#section1" class="sidebar-link" data-section="section1">
                     <div class="sidebar-line-item"></div>
                     <span class="sidebar-text">AI Basics</span>
+                </a></li>
+                <li><a href="#ai-articles" class="sidebar-link" data-section="ai-articles">
+                    <div class="sidebar-line-item"></div>
+                    <span class="sidebar-text">AI Articles</span>
                 </a></li>
             </ul>
         </nav>
@@ -41,78 +42,33 @@
     <main class="main-content">
         <section id="home" class="section-card text-center mb-16 pt-8">
             <h1 class="section-title">AI Training for Strategic Sourcing</h1>
-            <p class="section-subtitle max-w-3xl mx-auto mb-8">Welcome to your interactive guide to Artificial Intelligence. This series of short modules is designed to help the Rutgers sourcing team understand and leverage AI as a powerful tool in your daily work. Use the search below to find exactly what you need.</p>
+            <p class="section-subtitle max-w-3xl mx-auto mb-8">Welcome to your interactive guide to Artificial Intelligence. This series of short modules is designed to help the Rutgers sourcing team understand and leverage AI as a powerful tool in your daily work.</p>
+            
+            <!-- Quick Category Filters -->
+            <div class="category-filters mb-8">
+                <h3 class="text-lg font-semibold mb-4 text-center">Quick Access</h3>
+                <div class="filter-grid">
+                    <button class="category-filter-btn" data-category="basics">
+                        <div class="filter-icon">🤖</div>
+                        <div class="filter-text">AI Basics</div>
+                    </button>
+                    <button class="category-filter-btn" data-category="prompting">
+                        <div class="filter-icon">✍️</div>
+                        <div class="filter-text">Prompting</div>
+                    </button>
+                    <button class="category-filter-btn" data-category="templates">
+                        <div class="filter-icon">📋</div>
+                        <div class="filter-text">Templates</div>
+                    </button>
+                    <button class="category-filter-btn" data-category="tools">
+                        <div class="filter-icon">🛠️</div>
+                        <div class="filter-text">Tools</div>
+                    </button>
+                </div>
+            </div>
         </section>
         <div class="space-y-12">
-            <!-- MASSIVE SEARCH HUB -->
-            <section id="search-hub" class="scroll-mt-20">
-                <h2 class="section-title">Find What You Need</h2>
-                <div class="section-card">
-                    <!-- Main Search Bar -->
-                    <div class="search-hub-container mb-8">
-                        <div class="search-hub-wrapper">
-                            <input type="text" id="main-search-input" placeholder="Search AI training content, templates, and resources..." class="main-search-input">
-                            <button id="main-search-btn" class="main-search-btn">🔍 Search</button>
-                            <button id="clear-main-search" class="clear-main-search-btn" style="display: none;">✕</button>
-                        </div>
-                        
-                        <!-- Search Suggestions -->
-                        <div id="main-search-suggestions" class="search-suggestions-container hidden">
-                            <div class="suggestions-header">
-                                <h4>Popular Searches</h4>
-                            </div>
-                            <div class="suggestions-list">
-                                <button class="suggestion-item" data-search="supplier research">🔍 Supplier Research</button>
-                                <button class="suggestion-item" data-search="market analysis">📊 Market Analysis</button>
-                                <button class="suggestion-item" data-search="RFP questions">📋 RFP Questions</button>
-                                <button class="suggestion-item" data-search="negotiation strategy">🤝 Negotiation Strategy</button>
-                                <button class="suggestion-item" data-search="risk assessment">⚠️ Risk Assessment</button>
-                                <button class="suggestion-item" data-search="CRAFT framework">✍️ CRAFT Framework</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quick Category Filters -->
-                    <div class="category-filters mb-8">
-                        <h3 class="text-lg font-semibold mb-4 text-center">Quick Access</h3>
-                        <div class="filter-grid">
-                            <button class="category-filter-btn" data-category="basics">
-                                <div class="filter-icon">🤖</div>
-                                <div class="filter-text">AI Basics</div>
-                            </button>
-                            <button class="category-filter-btn" data-category="prompting">
-                                <div class="filter-icon">✍️</div>
-                                <div class="filter-text">Prompting</div>
-                            </button>
-                            <button class="category-filter-btn" data-category="templates">
-                                <div class="filter-icon">📋</div>
-                                <div class="filter-text">Templates</div>
-                            </button>
-                            <button class="category-filter-btn" data-category="tools">
-                                <div class="filter-icon">🛠️</div>
-                                <div class="filter-text">Tools</div>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Search Results Container -->
-                    <div id="main-search-results" class="search-results-container hidden">
-                        <div class="results-header">
-                            <h3>Search Results</h3>
-                            <div class="results-count"></div>
-                        </div>
-                        <div id="main-results-list" class="results-list"></div>
-                    </div>
-                    
-                    <!-- Recent Searches -->
-                    <div id="recent-searches" class="recent-searches-container hidden">
-                        <h4 class="text-sm font-semibold mb-3">Recent Searches</h4>
-                        <div id="recent-searches-list" class="recent-searches-list"></div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- AI Basics Section (moved to last) -->
+            <!-- AI Basics Section -->
             <section id="section1" class="scroll-mt-20">
                 <h2 class="section-title">What is AI & Why Should We Care?</h2>
                 <div class="section-card">
@@ -132,6 +88,82 @@
                     </div>
                     <div class="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
                         <p class="font-semibold text-red-700">Just as Google Maps helps us find the best route, AI can help us find the best suppliers or the most effective negotiation strategy.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI in Sourcing Articles Section -->
+            <section id="ai-articles" class="scroll-mt-20">
+                <h2 class="section-title">AI in Sourcing: Latest Articles & News</h2>
+                <div class="section-card">
+                    <p class="section-subtitle mb-8">Stay updated with the latest developments in AI applications for strategic sourcing.</p>
+                    
+                    <!-- Articles Grid -->
+                    <div id="articles-grid" class="articles-grid">
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../photo/What%20Is%20Agentic%20AI%20and%20Why%20Does%20it%20Matter%20in%20Procurement%3F%20.jpg" alt="Agentic AI in Procurement" class="article-img">
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">What Is Agentic AI and Why Does it Matter in Procurement?</h3>
+                                <p class="article-excerpt">Agentic AI represents a new era in procurement technology, offering autonomous decision-making capabilities that go beyond traditional predictive and generative AI systems.</p>
+                                <div class="article-meta">
+                                    <span class="article-date">August 21, 2025</span>
+                                    <span class="article-source">JAGGAER</span>
+                                </div>
+                                <a href="https://www.jaggaer.com/blog/agentic-ai-procurement-why-it-matters" class="article-link" target="_blank">Read Full Article →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../photo/agentmodeMSFT.webp" alt="Microsoft 365 Copilot Agent Mode" class="article-img">
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">Vibe working: Introducing Agent Mode and Office Agent in Microsoft 365 Copilot</h3>
+                                <p class="article-excerpt">Microsoft introduces Agent Mode in Office apps and Office Agent in Copilot chat, bringing agentic productivity to Office artifacts. Get started with a simple prompt and work iteratively with Copilot as it orchestrates multi-step tasks.</p>
+                                <div class="article-meta">
+                                    <span class="article-date">September 29, 2025</span>
+                                    <span class="article-source">Microsoft</span>
+                                </div>
+                                <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/29/vibe-working-introducing-agent-mode-and-office-agent-in-microsoft-365-copilot/" class="article-link" target="_blank">Read Full Article →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../photo/Revolutionizing procurement.png" alt="Revolutionizing Procurement with AI" class="article-img">
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">Revolutionizing Procurement: Leveraging Data and AI for Strategic Advantage</h3>
+                                <p class="article-excerpt">McKinsey explores how organizations can transform their procurement functions by harnessing the power of data analytics and artificial intelligence for competitive advantage.</p>
+                                <div class="article-meta">
+                                    <span class="article-date">June 13, 2024</span>
+                                    <span class="article-source">McKinsey & Company</span>
+                                </div>
+                                <a href="https://www.mckinsey.com/capabilities/operations/our-insights/revolutionizing-procurement-leveraging-data-and-ai-for-strategic-advantage" class="article-link" target="_blank">Read Full Article →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../photo/ChatbotNegotiations.png" alt="AI in Negotiations" class="article-img">
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">Chatbot Negotiations: What Can AI Do for You?</h3>
+                                <p class="article-excerpt">Harvard's Program on Negotiation examines the role of AI chatbots in negotiation processes and their potential to enhance procurement negotiations.</p>
+                                <div class="article-meta">
+                                    <span class="article-date">June 26, 2025</span>
+                                    <span class="article-source">Harvard Program on Negotiation</span>
+                                </div>
+                                <a href="https://www.pon.harvard.edu/daily/negotiation-skills-daily/chatbot-negotiations-what-can-ai-do-for-you/" class="article-link" target="_blank">Read Full Article →</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <!-- Load More Button -->
+                    <div class="text-center mt-8">
+                        <button id="load-more-articles" class="btn-primary">Load More Articles</button>
                     </div>
                 </div>
             </section>
@@ -177,9 +209,39 @@
             });
         });
 
+        // Quick Access buttons functionality
+        const quickAccessButtons = document.querySelectorAll('.category-filter-btn');
+        quickAccessButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const category = button.getAttribute('data-category');
+                console.log('Quick Access button clicked:', category);
+                
+                switch(category) {
+                    case 'basics':
+                        // AI Basics goes to training-basics page
+                        window.location.href = 'training-basics.html';
+                        break;
+                    case 'prompting':
+                        // Prompting goes to training main page
+                        window.location.href = 'training.html';
+                        break;
+                    case 'templates':
+                        // Templates goes to template-warehouse page
+                        window.location.href = 'template-warehouse.html';
+                        break;
+                    case 'tools':
+                        // Tools goes to resources page first section
+                        window.location.href = 'resources.html#ai-tools';
+                        break;
+                    default:
+                        console.log('Unknown category:', category);
+                }
+            });
+        });
+
         // Update active state based on scroll position
         function updateActiveSection() {
-            const sections = ['home', 'search-hub', 'section1'];
+            const sections = ['home', 'section1', 'ai-articles'];
             const scrollPosition = window.scrollY + 100; // Offset for better detection
             
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -202,6 +264,15 @@
         
         // Initial active state
         updateActiveSection();
+
+        // Load more articles functionality
+        const loadMoreBtn = document.getElementById('load-more-articles');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                // Redirect to Bing news search for procurement AI
+                window.open('https://www.google.com/search?q=ai+in+procurement&newwindow=1&client=safari&sca_esv=219388647f983b16&biw=1912&bih=965&tbm=nws&sxsrf=AE3TifOOpbpKpwBzMAi-c_anL9U34Ehkbg%3A1759182290888&ei=0v3aaKb6NbyHptQPjvWs-Qw&ved=0ahUKEwimq6zc-P6PAxW8g4kEHY46K88Q4dUDCA4&uact=5&oq=ai+in+procurement&gs_lp=Egxnd3Mtd2l6LW5ld3MiEWFpIGluIHByb2N1cmVtZW50MgsQABiABBiRAhiKBTILEAAYgAQYkQIYigUyCxAAGIAEGJECGIoFMgsQABiABBiRAhiKBTIGEAAYBxgeMgsQABiABBiRAhiKBTIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSNggUN0MWL0ecAF4AJABAJgBoQGgAd8GqgEDMy41uAEDyAEA-AEB-AECmAIIoAKQBsICBRAAGIAEwgIKEAAYgAQYQxiKBcICCBAAGIAEGLEDwgILEAAYgAQYsQMYgwHCAgcQABiABBgNmAMAiAYBkgcDNC40oAeAMLIHAzMuNLgHjgbCBwMwLjjIBw4&sclient=gws-wiz-news', '_blank');
+            });
+        }
     });
     </script>
 </body>
